@@ -1,0 +1,15 @@
+<button (click)=onToggleDisplay()>Display details</button>
+<p *ngIf="display">Secret password = tuna</p>
+<!-- <table>
+  <tbody>
+      <tr *ngFor="let log of logs">
+          <td [ngStyle]="{'background-color': getBackgroundColor()}">{{log}}</td>
+      </tr>
+  </tbody>
+</table> -->
+<p *ngFor="let log of logs; let i = index" 
+  [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'transparent'}" 
+  [ngClass]="{'blanc': i >= 4 }">
+
+  {{log}}
+</p>
